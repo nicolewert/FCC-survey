@@ -1,0 +1,23 @@
+body{
+  background: Cornsilk;
+  text-align: center;
+  margin: 5%;
+}
+
+form{
+  margin: auto 10% auto 10%;
+  padding:1em;
+  background-color: DarkSeaGreen;
+  border: 2px solid Gray;
+  border-radius: 20px;
+}
+
+div{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-auto-rows: minmax(5px, auto);
+}
+
+fieldset{
+  text-align: left;
+}
