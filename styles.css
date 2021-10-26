@@ -55,6 +55,30 @@ form {
   align-self: center;
 }
 
+/*=============
+  Components 
+  =============*/
+
+/* ---Input Text Bubbles--- */
+input,
+textarea {
+  background: #FFF9E2;
+  border-radius: 35px;
+  border: 0;
+  width: 95%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+input {
+  height: 50px;
+}
+
+textarea { 
+  height: 124px;
+  resize: none;
+}
+
 }
 
 fieldset{
