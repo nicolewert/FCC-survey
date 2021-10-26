@@ -1,23 +1,188 @@
-body{
-  background: Cornsilk;
+/* Table of Contents
+
+1. global styles
+
+2. layout
+
+3. components
+
+*/
+
+/*=============
+  Global Styles 
+  =============*/
+html, body{
+  height: 100%; 
+}
+  
+body {
+  background: linear-gradient(180deg, #FF9A84 0%, #F2F5D0 100%);
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1.5rem; 
+}
+
+h1 {
   text-align: center;
-  margin: 5%;
+  font-size: 2.25rem;
+  margin-top: 10%; 
+  margin-bottom: 5%; 
 }
 
-form{
-  margin: auto 10% auto 10%;
-  padding:1em;
-  background-color: DarkSeaGreen;
-  border: 2px solid Gray;
-  border-radius: 20px;
-}
+/*=============
+  Layout 
+  =============*/
 
-div{
+/* ---Parent Grid--- */
+form { 
   display: grid;
-  grid-template-columns:repeat(2,1fr);
-  grid-auto-rows: minmax(5px, auto);
+  grid-gap: 2%; 
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, auto);
+  justify-items: center; 
+  margin: 10%;
+  margin-top: 0; 
 }
 
-fieldset{
-  text-align: left;
+/* ---Nested Flex--- */
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.item label {
+  align-self: flex-start;
+}
+
+/* ---Nested Grid--- */
+.half {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+.half label {
+  align-self: center;
+}
+
+/*=============
+  Components 
+  =============*/
+
+/* ---Input Text Bubbles--- */
+input,
+textarea {
+  background: #FFF9E2;
+  border-radius: 35px;
+  border: 0;
+  width: 95%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+input {
+  height: 50px;
+}
+
+textarea { 
+  height: 124px;
+  resize: none;
+}
+
+/* ---Dropdown Styling--- */
+.satisfaction {
+  position: relative;
+  margin-top: 3%; 
+}
+
+.form-select {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 50px 50px 50px 50px;
+  background: #FFF9E2;
+  border: 0;
+  cursor: pointer;
+  height: 49px;
+  padding: auto 0.4em auto;
+  font-size: 0.8rem;
+  width: 95%;
+}
+
+/* Remove Arrows for Number input */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-arrow {
+  position: absolute;
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 17%;
+  right: 5%;
+  pointer-events: none;
+}
+
+/* ---Radio Styling--- */
+
+.radio-buttons-container {
+  display: flex; 
+  margin-left: 5%; 
+}
+
+.radio-input{
+  display: none; 
+}
+
+.radio-label{
+  cursor: pointer; 
+  position: relative;
+}
+
+.radio-label:first-of-type{
+  margin-right: 5%; 
+}
+
+.radio-label::before, .radio-label::after{
+  content: ""; 
+  display: inline-block;
+  border-radius: 50%;
+  margin: -8px 5px; 
+  margin-left: 0;
+}
+
+.radio-label::before{ 
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 249, 226, 0) 0%, #FFF9E2 100%);
+  height: 27px; 
+  width: 27px;   
+}
+
+.radio-label::after{
+  background: rgba(0, 0, 0, 0);   
+  width: 13.5px; 
+  height:13.5px;   
+  position: absolute;
+  top: 23px; 
+  left: 7px; 
+  transition: all 0.4s; 
+}
+
+.radio-input:checked + label::after{
+  background: rgba(0, 0, 0, 1); 
+}
+
+/* ---Submit Button Styles--- */
+#submit {
+  background: rgba(255, 154, 132, 0.71);
+  border-radius: 35px;
+  border: 0px;
+  margin-top: 7px;
+  width: 20%;
+  min-width: 129px;
 }
