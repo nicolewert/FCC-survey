@@ -18,18 +18,43 @@ h1 {
   margin-bottom: 5%; 
 }
 
-form{
-  margin: auto 10% auto 10%;
-  padding:1em;
-  background-color: DarkSeaGreen;
-  border: 2px solid Gray;
-  border-radius: 20px;
+/*=============
+  Layout 
+  =============*/
+
+/* ---Parent Grid--- */
+form { 
+  display: grid;
+  grid-gap: 2%; 
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, auto);
+  justify-items: center; 
+  margin: 10%;
+  margin-top: 0; 
 }
 
-div{
+/* ---Nested Flex--- */
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.item label {
+  align-self: flex-start;
+}
+
+/* ---Nested Grid--- */
+.half {
   display: grid;
-  grid-template-columns:repeat(2,1fr);
-  grid-auto-rows: minmax(5px, auto);
+  grid-template-columns: 45% 55%;
+}
+
+.half label {
+  align-self: center;
+}
+
 }
 
 fieldset{
