@@ -79,6 +79,45 @@ textarea {
   resize: none;
 }
 
+/* ---Dropdown Styling--- */
+.satisfaction {
+  position: relative;
+  margin-top: 3%; 
+}
+
+.form-select {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 50px 50px 50px 50px;
+  background: #FFF9E2;
+  border: 0;
+  cursor: pointer;
+  height: 49px;
+  padding: auto 0.4em auto;
+  font-size: 0.8rem;
+  width: 95%;
+}
+
+/* Remove Arrows for Number input */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-arrow {
+  position: absolute;
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 17%;
+  right: 5%;
+  pointer-events: none;
+}
 }
 
 fieldset{
