@@ -167,4 +167,12 @@ input::-webkit-inner-spin-button {
   background: rgba(0, 0, 0, 1); 
 }
 
+/* ---Submit Button Styles--- */
+#submit {
+  background: rgba(255, 154, 132, 0.71);
+  border-radius: 35px;
+  border: 0px;
+  margin-top: 7px;
+  width: 20%;
+  min-width: 129px;
 }
