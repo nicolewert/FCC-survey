@@ -57,19 +57,19 @@
       <span class="custom-arrow"><i class="fas fa-angle-down"></i></span>
     </div>
 
-    <fieldset>
-      <legend>Would you recommend product X to a friend?</legend>
-      <label><input type="radio" name="recommend-yes-maybe-no" value="Yes">Yes</label><br>
-      <label><input type="radio" name="recommend-yes-maybe-no" value="Maybe">Maybe</label><br>
-      <label><input type="radio" name="recommend-yes-maybe-no" value="No">No</label><br>
-    </fieldset><br>
+    <fieldset class="recommendation item half" required>
+      <legend>Recommend to a friend?</legend>
 
-    <fieldset>
-      <legend>If 'No', why not?</legend>
-      <label><input type="checkbox" name="characteristic" value="Too expensive">Too expensive</label><br>
-      <label><input type="checkbox" name="characteristic" value="Does not work well">Does not work well</label><br>
-      <label><input type="checkbox" name="characteristic" value="Prefer an alternative product">Prefer an alternative product</label><br>
-    </fieldset><br>
+      <div class="radio-buttons-container">
+      
+        <input id="yes" class="radio-input" type="radio" name="recommend-yes-no" value="Yes" checked>
+        <label class="radio-label" for="yes">Yes</label>
+
+        <input id="no" class="radio-input" type="radio" name="recommend-yes-no" value="No">
+        <label class="radio-label"for="no" >No</label>
+
+      </div>
+    </fieldset>
 
     <fieldset>
       <legend>Additional Feedback: </legend>
