@@ -44,17 +44,18 @@
       <input type="number" id="number" min="10" max="100" required>
     </div>
 
-    <div>
-      <label for="dropdown">How satisfied are you with product X?</label>
-      <select id="dropdown" required>
-        <option value="" disabled selected hidden>Please select one</option>
+    <div class="satisfaction item half">
+      <label for="dropdown">Satisfied?</label>
+      <select id="dropdown" class="form-select" required>
+        <option value="" disabled selected hidden></option>
         <option value="Very satisfied">Very Satisfied</option>
         <option value="Satisfied">Satisfied</option>
         <option value="Neutral">Neutral</option>
         <option value="Unsatisfied">Unsatisfied</option>
         <option value="Very unsatisfied">Very Unsatisfied</option>
       </select>
-    </div><br>
+      <span class="custom-arrow"><i class="fas fa-angle-down"></i></span>
+    </div>
 
     <fieldset>
       <legend>Would you recommend product X to a friend?</legend>
