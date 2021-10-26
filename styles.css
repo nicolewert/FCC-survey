@@ -1,7 +1,21 @@
-body{
-  background: Cornsilk;
+/*=============
+  Global Styles 
+  =============*/
+html, body{
+  height: 100%; 
+}
+  
+body {
+  background: linear-gradient(180deg, #FF9A84 0%, #F2F5D0 100%);
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1.5rem; 
+}
+
+h1 {
   text-align: center;
-  margin: 5%;
+  font-size: 2.25rem;
+  margin-top: 10%; 
+  margin-bottom: 5%; 
 }
 
 form{
