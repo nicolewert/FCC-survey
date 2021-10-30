@@ -187,4 +187,10 @@ input::-webkit-inner-spin-button {
   margin-top: 7px;
   width: 20%;
   min-width: 129px;
+/*=============
+  Media Queries 
+  =============*/
+@media (min-width: 845px) {
+}
+
 }
