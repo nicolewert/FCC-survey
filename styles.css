@@ -92,6 +92,7 @@ textarea {
 .satisfaction {
   position: relative;
   margin-top: 3%; 
+  text-align: left;
 }
 
 .form-select {
@@ -129,6 +130,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* ---Radio Styling--- */
+legend{
+  text-align: left;
+}
 
 .radio-buttons-container {
   display: flex; 
