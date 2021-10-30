@@ -6,26 +6,27 @@
 
 3. components
 
+4. media queries
+
 */
 
 /*=============
   Global Styles 
   =============*/
-html, body{
-  height: 100%; 
-}
-  
 body {
+  min-height: 100vh;
   background: linear-gradient(180deg, #FF9A84 0%, #F2F5D0 100%);
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 1.5rem; 
+  text-align: center;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 h1 {
-  text-align: center;
   font-size: 2.25rem;
-  margin-top: 10%; 
-  margin-bottom: 5%; 
 }
 
 /*=============
@@ -33,14 +34,14 @@ h1 {
   =============*/
 
 /* ---Parent Grid--- */
-form { 
+form {  
   display: grid;
   grid-gap: 2%; 
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, auto);
+  grid-template-rows: repeat(6, min-content);
   justify-items: center; 
-  margin: 10%;
-  margin-top: 0; 
+  margin: 0 10%;
+  height: 600px;
 }
 
 /* ---Nested Flex--- */
@@ -85,7 +86,7 @@ input {
 }
 
 textarea { 
-  height: 124px;
+  height: 100px;
   resize: none;
 }
 
@@ -93,6 +94,7 @@ textarea {
 .satisfaction {
   position: relative;
   margin-top: 3%; 
+  text-align: left;
 }
 
 .form-select {
@@ -130,6 +132,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* ---Radio Styling--- */
+legend{
+  text-align: left;
+}
 
 .radio-buttons-container {
   display: flex; 
@@ -182,7 +187,59 @@ input::-webkit-inner-spin-button {
   background: rgba(255, 154, 132, 0.71);
   border-radius: 35px;
   border: 0px;
-  margin-top: 7px;
   width: 20%;
   min-width: 129px;
+  margin: 1%; 
+}
+
+/*=============
+  Media Queries 
+  =============*/
+@media (min-width: 845px) {
+  form{
+    background: #FFF9E2;
+    width: 620px; 
+    height: 520px;
+    border-radius: 35px; 
+    padding: 2%; 
+    grid-template-columns: 15% repeat(2, 1fr) 15%;
+    grid-template-rows: repeat(7, auto);
+  }
+
+  .item{
+    flex-direction: row;
+    grid-column: 2/span 2;
+    justify-content: space-between;
+  }
+
+  .item label{
+    align-self: center; 
+  }
+
+  input{
+    border-bottom: solid 5px #FF9A84; 
+    border-radius: 0; 
+    width: 70%; 
+  }
+
+  .form-select, textarea{
+    background: #FF9A84;
+    width: 80%;
+  }
+
+  textarea{
+    height: 92px; 
+  }
+
+  .feedback{
+    flex-direction: column;
+  }
+
+  .custom-arrow{
+    right: 13%; 
+  }
+
+  .radio-label::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 154, 132, 0) 0%, #FF9A84 100%);
+  }
 }
