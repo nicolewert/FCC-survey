@@ -228,4 +228,9 @@ legend{
   textarea{
     height: 92px; 
   }
+
+  .feedback{
+    flex-direction: column;
+  }
+
 }
