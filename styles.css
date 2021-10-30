@@ -233,4 +233,8 @@ legend{
     flex-direction: column;
   }
 
+  .custom-arrow{
+    right: 13%; 
+  }
+
 }
