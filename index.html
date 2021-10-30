@@ -1,67 +1,88 @@
 <!DOCTYPE html>
-<html id="main">
+<html lang="en" id="main">
+
 <head>
-  <link rel="stylesheet" href ="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
   <title>Product Survey</title>
 </head>
+
 <body>
 
-  <h1 id ="title">User Experience Survey for Product X</h1>
-  <p id="description">How was your experience using product X? Please let
-      us know so we can continue to develop our product.</p>
+  <h1 id="title">Product Survey</h1>
 
-  <form id ="survey-form" action="#">
+  <form id="survey-form" action="#" autocomplete="off">
 
-    <div>
+    <div class="name item">
       <label for="name" id="name-label">Name</label>
-      <input id="name" type ="text" placeholder="Enter your name" required><br>
+      <input id="name" type="text" required>
     </div>
 
-    <div>
+    <div class="email item">
       <label for="email" id="email-label">Email</label>
-      <input type ="email" id="email" placeholder="Enter your email" required><br>
+      <input type="email" id="email" required>
     </div>
 
-    <div>
-      <label for ="number" id="number-label">Age (optional)</label>
-      <input type="number" id="number" placeholder="Age" min="10" max="100"><br>
+    <div class="age item">
+      <label for="number" id="number-label">Age</label>
+      <input type="number" id="number" min="10" max="100" required>
     </div>
 
-    <div>
-      <label for="dropdown">How satisfied are you with product X?</label>
-      <select id="dropdown" required>
-        <option value="" disabled selected hidden>Please select one</option>
+    <div class="satisfaction item half">
+      <label for="dropdown">Satisfied?</label>
+      <select id="dropdown" class="form-select" required>
+        <option value="" disabled selected hidden></option>
         <option value="Very satisfied">Very Satisfied</option>
         <option value="Satisfied">Satisfied</option>
         <option value="Neutral">Neutral</option>
         <option value="Unsatisfied">Unsatisfied</option>
         <option value="Very unsatisfied">Very Unsatisfied</option>
       </select>
-    </div><br>
+      <span class="custom-arrow"><i class="fas fa-angle-down"></i></span>
+    </div>
 
-    <fieldset>
-      <legend>Would you recommend product X to a friend?</legend>
-      <label><input type="radio" name="recommend-yes-maybe-no" value="Yes">Yes</label><br>
-      <label><input type="radio" name="recommend-yes-maybe-no" value="Maybe">Maybe</label><br>
-      <label><input type="radio" name="recommend-yes-maybe-no" value="No">No</label><br>
-    </fieldset><br>
+    <fieldset class="recommendation item half" required>
+      <legend>Recommend to a friend?</legend>
 
-    <fieldset>
-      <legend>If 'No', why not?</legend>
-      <label><input type="checkbox" name="characteristic" value="Too expensive">Too expensive</label><br>
-      <label><input type="checkbox" name="characteristic" value="Does not work well">Does not work well</label><br>
-      <label><input type="checkbox" name="characteristic" value="Prefer an alternative product">Prefer an alternative product</label><br>
-    </fieldset><br>
+      <div class="radio-buttons-container">
 
-    <fieldset>
-      <legend>Additional Feedback: </legend>
-      <textarea name="name" rows="8" cols="80" placeholder="Please let us know what you think..."></textarea>
+        <input id="yes" class="radio-input" type="radio" name="recommend-yes-no" value="Yes" checked>
+        <label class="radio-label" for="yes">Yes</label>
+
+        <input id="no" class="radio-input" type="radio" name="recommend-yes-no" value="No">
+        <label class="radio-label" for="no">No</label>
+
+      </div>
     </fieldset>
 
-    <button id="submit" type="submit">Submit Form</button>
+    <fieldset class="feedback item">
+      <legend>Additional Thoughts </legend>
+      <textarea name="name"></textarea>
+    </fieldset>
 
   </form>
 
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" target="_blank"></script>
+  <button form="survey-form" id="submit" class="btn btn-outline-dark" type="submit">submit</button>
+  <!-- Freecodecamp test script -->
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" target="_blank"></script> -->
 </body>
+
 </html>
