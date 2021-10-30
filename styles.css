@@ -213,4 +213,19 @@ legend{
   .item label{
     align-self: center; 
   }
+
+  input{
+    border-bottom: solid 5px #FF9A84; 
+    border-radius: 0; 
+    width: 70%; 
+  }
+
+  .form-select, textarea{
+    background: #FF9A84;
+    width: 80%;
+  }
+
+  textarea{
+    height: 92px; 
+  }
 }
