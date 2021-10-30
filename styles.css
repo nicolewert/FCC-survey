@@ -11,10 +11,6 @@
 /*=============
   Global Styles 
   =============*/
-html, body{
-  height: 100%; 
-}
-  
 body {
   min-height: 100vh;
   background: linear-gradient(180deg, #FF9A84 0%, #F2F5D0 100%);
