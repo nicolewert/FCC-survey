@@ -16,6 +16,7 @@ html, body{
 }
   
 body {
+  min-height: 100vh;
   background: linear-gradient(180deg, #FF9A84 0%, #F2F5D0 100%);
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 1.5rem; 
