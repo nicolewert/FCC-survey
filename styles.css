@@ -185,9 +185,11 @@ legend{
   background: rgba(255, 154, 132, 0.71);
   border-radius: 35px;
   border: 0px;
-  margin-top: 7px;
   width: 20%;
   min-width: 129px;
+  margin: 1%; 
+}
+
 /*=============
   Media Queries 
   =============*/
